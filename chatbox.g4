@@ -7,16 +7,16 @@ conditionalCommand: IF condition THEN command;
 condition: totalValue|itemAmount;
 
 totalValue: 'total is' compareWords MONEY;
-itemAmount: 'amount of' (ID|NAME) 'is' compareWords QUANTITY;
+itemAmount: 'amount of' NAME 'is' compareWords QUANTITY;
 
 compareWords: ('equal to' | 'more than' | 'less than' | 'not equal to' | 'greater than or equal to' | 'less than or equal to');
-addProduct: ADD QUANTITY (ID|NAME) (',' QUANTITY (ID|NAME))* ('to cart')?;
-deleteProduct: DELETE (ID|NAME) (',' QUANTITY (ID|NAME))* ('from cart')?;
-increaseAmount: INCREASE (ID|NAME) ('by')? QUANTITY;
-decreaseAmount: DECREASE (ID|NAME) ('by')? QUANTITY;
-setAmount: SET (ID|NAME) 'to' QUANTITY;
+addProduct: ADD QUANTITY NAME (',' QUANTITY NAME)* ('to cart')?;
+deleteProduct: DELETE NAME (',' QUANTITY NAME)* ('from cart')?;
+increaseAmount: INCREASE NAME ('by')? QUANTITY;
+decreaseAmount: DECREASE NAME ('by')? QUANTITY;
+setAmount: SET NAME 'to' QUANTITY;
 applyDiscount: 'apply' DISCOUNT;
-listProducts: 'list' ('all products' | (ID|NAME));
+listProducts: 'list' ('all products' | NAME);
 viewCart: 'view cart';
 checkOut: 'check out';
 
@@ -29,12 +29,11 @@ IF: 'if';
 THEN: 'then';
 DISCOUNT: ('Welcome'|'Goodbye'|'See you soon');
 
-ID: [0-9]+;
-NAME: [A-Z]?[a-z]+;
+NAME: [a-zA-Z][a-zA-Z]*;
 QUANTITY: [0-9]+;
 TIME: [0-9][0-9]':'[0-9][0-9];
 MONEY: [0-9]+'.'[0-9][0-9];
 
-WS: [\t\r\n]+ -> skip;
+WS: [ \t\r\n]+ -> skip;
 
 // noname4now
