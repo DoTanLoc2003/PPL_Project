@@ -6,8 +6,11 @@ This is the PPL project about chatbox help users to interact with shopping by co
 
 
 (04/06/2025)
+
 Project Starting Date: 04/06/2025 (4 days left to deadline)
+
 Team members: ? myself only
+
 Starting coding date: 10/05/2025
 
 **Initialize the code and how to run**
@@ -33,9 +36,10 @@ Open the terminal, cd to the extracted folder:
 **Future Work**
 - I wrote this to have enough, I may write the report more careful and with academic words. But this can be used in Webs, Cashier or automation work.
 
-**Lecturer**
+**Lecturer:**
 [Le Thi Ngoc Hanh](https://lehanhcs.github.io/)
 
 Do Tan Loc - ITCSIU21199
+
 *noname4now*
 
