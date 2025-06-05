@@ -39,10 +39,10 @@ def run():
 
     while True:
         try:
-            user_input = input("\n>> ").strip()
+            user_input = input("\n>> ").strip().lower()
             if not user_input:
                 continue
-            if user_input.lower() in ("exit", "quit"):
+            if user_input in ("exit", "quit"):
                 print("Exiting chatbox.")
                 break
 

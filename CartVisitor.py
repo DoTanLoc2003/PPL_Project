@@ -11,7 +11,7 @@ class CartVisitor(chatboxVisitor):
             with open(PRODUCTS_FILE, 'r') as f:
                 products_data = json.load(f)
             self.products = {item['id']: item['price'] for item in products_data}
-            self.products.update({item['name']: item['price'] for item in products_data})
+            self.products.update({item['name'].lower(): item['price'] for item in products_data})
         except FileNotFoundError:
             print(f"Error: {PRODUCTS_FILE} not found")
             sys.exit(1)
