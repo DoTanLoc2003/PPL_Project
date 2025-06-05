@@ -217,6 +217,17 @@ class CartVisitor(chatboxVisitor):
             return "Cart is empty, nothing to check out"
         total = self.calculate_total()
         result = f"Checked out. Total: ${total:.2f}"
+        
+        lines = ["Receipt:"]
+        for prod, qty in sorted(self.cart.items()):
+            lines.append(f"{prod}: {qty} (Subtotal: ${qty * self.products[prod]:.2f})")
+            
+        lines.append(f"Total: ${total:.2f}")    
+        lines.append("Thank you for your purchase!")
+
+        with open("receipt.txt", "w") as f:
+            f.write("\n".join(lines))
+            
         self.cart.clear()
         self.current_discount = None
         return result
