@@ -27,7 +27,7 @@ DECREASE: 'decrease';
 SET: 'set';
 IF: 'if';
 THEN: 'then';
-DISCOUNT: ('Welcome'|'Goodbye'|'See you soon');
+DISCOUNT: ('welcome'|'goodbye'|'see you soon');
 
 NAME: [a-zA-Z][a-zA-Z]*;
 QUANTITY: [0-9]+;

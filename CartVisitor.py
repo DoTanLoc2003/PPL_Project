@@ -17,9 +17,9 @@ class CartVisitor(chatboxVisitor):
             sys.exit(1)
 
         self.discounts = {
-            "Welcome": 0.1,
-            "Goodbye": 20.0,
-            "See you soon": 0.15
+            "welcome": 0.1,
+            "goodbye": 20.0,
+            "see you soon": 0.15
         }
         self.current_discount = None
         self.error = None
